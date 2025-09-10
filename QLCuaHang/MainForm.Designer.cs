@@ -165,6 +165,7 @@
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "Trang chủ";
             this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // pcLogo
             // 

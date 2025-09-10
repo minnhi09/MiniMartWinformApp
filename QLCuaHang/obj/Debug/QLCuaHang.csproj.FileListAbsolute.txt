@@ -30,3 +30,23 @@ D:\QLCuaHang\QLCuaHang\obj\Debug\QLCuaHang.csproj.GenerateResource.cache
 D:\QLCuaHang\QLCuaHang\obj\Debug\QLCuaHang.csproj.CoreCompileInputs.cache
 D:\QLCuaHang\QLCuaHang\obj\Debug\QLCuaHang.exe
 D:\QLCuaHang\QLCuaHang\obj\Debug\QLCuaHang.pdb
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\bin\Debug\QLCuaHang.exe.config
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\bin\Debug\QLCuaHang.exe
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\bin\Debug\QLCuaHang.pdb
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.csproj.AssemblyReference.cache
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.frm_AccountProfile.resources
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.frmDoanhThu.resources
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.frm_HangHoa.resources
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.frm_KhachHang.resources
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.frm_Login.resources
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.frm_NhanVien.resources
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.MainForm.resources
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.Properties.Resources.resources
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.csproj.GenerateResource.cache
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.csproj.CoreCompileInputs.cache
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.exe
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.pdb
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.LoginForm.resources
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\bin\Debug\Guna.UI2.dll
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.csproj.Up2Date
+D:\Desktop App\btn_QLCH\QuanLyCuaHang\QLCuaHang\obj\Debug\QLCuaHang.SignUp.resources

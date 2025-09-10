@@ -66,5 +66,10 @@ namespace QLCuaHang
                 e.Cancel = true;
             } 
         }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

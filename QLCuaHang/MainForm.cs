@@ -109,5 +109,10 @@ namespace QLCuaHang
             frm.FormClosed += (s, args) => this.Show();
             frm.ShowDialog();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
