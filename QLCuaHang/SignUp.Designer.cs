@@ -37,13 +37,13 @@ namespace QLCuaHang
             this.PasswordTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.fnameTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Label1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.picbox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lnameTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.PasswordTB2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.EmailTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.usernameTB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picbox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,18 +174,6 @@ namespace QLCuaHang
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(139, 21);
             this.guna2HtmlLabel1.TabIndex = 7;
             this.guna2HtmlLabel1.Text = "- Or connect using -";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(683, 629);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(210, 21);
-            this.guna2HtmlLabel2.TabIndex = 8;
-            this.guna2HtmlLabel2.Text = "Do u have an account? Login";
             // 
             // Label1
             // 
@@ -323,6 +311,18 @@ namespace QLCuaHang
             this.usernameTB.Size = new System.Drawing.Size(332, 58);
             this.usernameTB.TabIndex = 10;
             // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(683, 629);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(210, 21);
+            this.guna2HtmlLabel2.TabIndex = 8;
+            this.guna2HtmlLabel2.Text = "Do u have an account? Login";
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -364,12 +364,12 @@ namespace QLCuaHang
         private Guna.UI2.WinForms.Guna2TextBox PasswordTB;
         private Guna.UI2.WinForms.Guna2TextBox fnameTB;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel Label1;
         private Guna.UI2.WinForms.Guna2PictureBox picbox1;
         private Guna.UI2.WinForms.Guna2TextBox lnameTB;
         private Guna.UI2.WinForms.Guna2TextBox PasswordTB2;
         private Guna.UI2.WinForms.Guna2TextBox EmailTB;
         private Guna.UI2.WinForms.Guna2TextBox usernameTB;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }

@@ -37,7 +37,6 @@ namespace QLCuaHang
             this.lb2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.loginbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -91,7 +90,7 @@ namespace QLCuaHang
             this.txt_UserName.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txt_UserName.Name = "txt_UserName";
             this.txt_UserName.PlaceholderForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txt_UserName.PlaceholderText = "Email";
+            this.txt_UserName.PlaceholderText = "User";
             this.txt_UserName.SelectedText = "";
             this.txt_UserName.Size = new System.Drawing.Size(332, 58);
             this.txt_UserName.TabIndex = 2;
@@ -166,20 +165,6 @@ namespace QLCuaHang
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "- Or connect using -";
             // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.AutoSize = false;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(693, 551);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(226, 21);
-            this.guna2HtmlLabel2.TabIndex = 1;
-            this.guna2HtmlLabel2.Text = "Dont have an account? Sign Up";
-            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
-            // 
             // guna2CircleButton1
             // 
             this.guna2CircleButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(152)))));
@@ -238,7 +223,6 @@ namespace QLCuaHang
             this.Controls.Add(this.txt_MatKhau);
             this.Controls.Add(this.txt_UserName);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.lb2);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.picbox1);
@@ -266,7 +250,6 @@ namespace QLCuaHang
         private Guna.UI2.WinForms.Guna2HtmlLabel lb2;
         private Guna.UI2.WinForms.Guna2GradientButton loginbtn;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
