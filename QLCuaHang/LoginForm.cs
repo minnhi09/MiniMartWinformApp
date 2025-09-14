@@ -13,49 +13,49 @@ namespace QLCuaHang
 {
     public partial class LoginForm : Form
     {
-       
-
-        private List<NhanVien> danhSachNhanVien = new List<NhanVien>
-        {
-            new NhanVien(1, "Moemo", "admin", "123", "Quản lý"),
-            new NhanVien(2, "Anh Khoa", "user1", "abc", "Nhân viên"),
-            new NhanVien(3, "Quan Thùy Trâm", "user2", "xyz", "Nhân viên")
-        };
-
-        private NhanVien LoggedInUser;
+        private AuthenticationService authService;
 
         public LoginForm()
         {
             InitializeComponent();
+            authService = AuthenticationService.Instance;
         }
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-
             string username = txt_UserName.Text.Trim();
             string password = txt_MatKhau.Text.Trim();
-            NhanVien user = null;
-            foreach (var nv in danhSachNhanVien)
+
+            // Validate input
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                if (nv.UserName == username && nv.Password == password)
-                {
-                    user = nv;
-                    break;
-                }
+                MessageBox.Show("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+
+            // Attempt login
+            NhanVien user = authService.Login(username, password);
 
             if (user != null)
             {
-                LoggedInUser = user;
-                MessageBox.Show("Đăng nhập thành công! Xin chào " + user.TenNV, "Thông báo");
+                string roleText = user.GetRoleDisplayName();
+                MessageBox.Show($"Đăng nhập thành công!\nXin chào {user.TenNV}\nQuyền: {roleText}", 
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Hide();
                 MainForm frm = new MainForm(user);
-                frm.FormClosed += (s, args) => this.Show();
+                frm.FormClosed += (s, args) => {
+                    authService.Logout(); // Đăng xuất khi đóng MainForm
+                    this.Show();
+                };
                 frm.ShowDialog();
             }
             else
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_MatKhau.Clear();
+                txt_UserName.Focus();
+            }
         }
 
         private void frm_LoginForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -68,12 +68,9 @@ namespace QLCuaHang
 
         private void guna2HtmlLabel2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            SignUp signupForm = new SignUp();
-            signupForm.ShowDialog();
-
-            this.Show();
+            // Tạm thời disable chức năng đăng ký
+            MessageBox.Show("Chức năng đăng ký tạm thời không khả dụng.\nVui lòng liên hệ Admin để tạo tài khoản.", 
+                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -93,7 +93,7 @@ namespace QLCuaHang
             this.txt_UserName.PlaceholderText = "User";
             this.txt_UserName.SelectedText = "";
             this.txt_UserName.Size = new System.Drawing.Size(332, 58);
-            this.txt_UserName.TabIndex = 2;
+            this.txt_UserName.TabIndex = 0;
             // 
             // txt_MatKhau
             // 
@@ -120,7 +120,7 @@ namespace QLCuaHang
             this.txt_MatKhau.PlaceholderText = "Password";
             this.txt_MatKhau.SelectedText = "";
             this.txt_MatKhau.Size = new System.Drawing.Size(332, 58);
-            this.txt_MatKhau.TabIndex = 2;
+            this.txt_MatKhau.TabIndex = 1;
             this.txt_MatKhau.UseSystemPasswordChar = true;
             // 
             // lb2

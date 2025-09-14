@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+    Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -33,7 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+    <Reference
+      Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -77,12 +79,6 @@
     <Compile Include="frm_KhachHang.Designer.cs">
       <DependentUpon>frm_KhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Login.Designer.cs">
-      <DependentUpon>frm_Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,11 +102,19 @@
     <Compile Include="NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUp.cs">
+    <Compile Include="UserRole.cs" />
+    <Compile Include="AuthenticationService.cs" />
+    <Compile Include="frmUserManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <Compile Include="frmUserManagement.Designer.cs">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmAccountProfile.resx">
       <DependentUpon>frmAccountProfile.cs</DependentUpon>
@@ -123,9 +127,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_KhachHang.resx">
       <DependentUpon>frm_KhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Login.resx">
-      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_NhanVien.resx">
       <DependentUpon>frm_NhanVien.cs</DependentUpon>
@@ -146,8 +147,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

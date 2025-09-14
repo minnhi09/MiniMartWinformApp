@@ -5,8 +5,6 @@ VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLCuaHang", "QLCuaHang\QLCuaHang.csproj", "{886A53CA-1290-43D9-AE0B-07B1B76BE681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginRegister", "..\..\giao-dien-dang-nhap\dotNet-Login-Register\LoginRegister\LoginRegister.csproj", "{2D9529DF-22CE-47CC-9741-4B706E488C33}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{886A53CA-1290-43D9-AE0B-07B1B76BE681}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{886A53CA-1290-43D9-AE0B-07B1B76BE681}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{886A53CA-1290-43D9-AE0B-07B1B76BE681}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D9529DF-22CE-47CC-9741-4B706E488C33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D9529DF-22CE-47CC-9741-4B706E488C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D9529DF-22CE-47CC-9741-4B706E488C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D9529DF-22CE-47CC-9741-4B706E488C33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

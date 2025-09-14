@@ -12,17 +12,36 @@ namespace QLCuaHang
 {
     public partial class frm_NhanVien : Form
     {
-        private List<NhanVien> danhSachNhanVien = new List<NhanVien>();
+        private AuthenticationService authService;
+
         public frm_NhanVien()
         {
             InitializeComponent();
+            authService = AuthenticationService.Instance;
         }
 
         private void btn_ThongTinCaNhan_Click(object sender, EventArgs e)
         {
             this.Hide();
             frm_AccountProfile frm = new frm_AccountProfile();
-            frm.FormClosed += (s, args) => this.Hide();
+            frm.FormClosed += (s, args) => this.Show();
+            frm.ShowDialog();
+        }
+
+        /// <summary>
+        /// Mở form quản lý user (chỉ Admin)
+        /// </summary>
+        private void btnQuanLyUser_Click(object sender, EventArgs e)
+        {
+            if (!authService.IsCurrentUserAdmin())
+            {
+                MessageBox.Show("Chỉ Admin mới có quyền quản lý user!", "Không có quyền", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            this.Hide();
+            frmUserManagement frm = new frmUserManagement();
+            frm.FormClosed += (s, args) => this.Show();
             frm.ShowDialog();
         }
 
@@ -31,27 +50,45 @@ namespace QLCuaHang
             DialogResult result = MessageBox.Show("Bạn có muốn trở về không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                this.Hide();
-                MainForm frm = new MainForm();
-                frm.FormClosed += (s, args) => this.Show();
-                frm.ShowDialog();
+                this.Close(); // Đóng form hiện tại thay vì tạo MainForm mới
             }
         }
 
         private void frm_NhanVien_Load(object sender, EventArgs e)
         {
-            danhSachNhanVien.Add(new NhanVien(1, "Moemo", "admin", "123", "Quản lý"));
-            danhSachNhanVien.Add(new NhanVien(2, "Anh Khoa", "user1", "abc", "Nhân viên"));
-            danhSachNhanVien.Add(new NhanVien(3, "Quan Thùy Trâm", "user2", "xyz", "Nhân viên"));
+            // Kiểm tra quyền truy cập khi load form
+            if (!authService.IsCurrentUserAdmin())
+            {
+                MessageBox.Show("Bạn không có quyền truy cập chức năng quản lý nhân viên!", 
+                    "Không có quyền", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+                return;
+            }
 
-            HienThiDanhSach();
+            LoadDanhSachNhanVien();
         }
 
-        private void HienThiDanhSach()
+        /// <summary>
+        /// Load danh sách nhân viên từ AuthenticationService
+        /// </summary>
+        private void LoadDanhSachNhanVien()
         {
-            lv_All.Items.Clear();
-            lv_QuanLy.Items.Clear();
-            lv_NhanVien.Items.Clear();
+            var danhSach = authService.GetAllUsers();
+            if (danhSach != null)
+            {
+                HienThiDanhSach(danhSach);
+            }
+        }
+
+        /// <summary>
+        /// Hiển thị danh sách nhân viên lên ListView
+        /// </summary>
+        private void HienThiDanhSach(List<NhanVien> danhSachNhanVien)
+        {
+            // Clear tất cả ListView trước
+            if (lv_All != null) lv_All.Items.Clear();
+            if (lv_QuanLy != null) lv_QuanLy.Items.Clear();
+            if (lv_NhanVien != null) lv_NhanVien.Items.Clear();
 
             foreach (var nv in danhSachNhanVien)
             {
@@ -59,12 +96,16 @@ namespace QLCuaHang
                 item.SubItems.Add(nv.TenNV);
                 item.SubItems.Add(nv.UserName);
                 item.SubItems.Add(new string('*', nv.Password.Length));
+                item.SubItems.Add(nv.GetRoleDisplayName());
+                item.Tag = nv; // Lưu object NhanVien vào Tag
 
-                lv_All.Items.Add((ListViewItem)item.Clone()); 
+                // Thêm vào ListView tương ứng
+                if (lv_All != null)
+                    lv_All.Items.Add((ListViewItem)item.Clone()); 
 
-                if (nv.Role == "Quản lý")
+                if (nv.Role == UserRole.Admin && lv_QuanLy != null)
                     lv_QuanLy.Items.Add((ListViewItem)item.Clone());
-                else if (nv.Role == "Nhân viên")
+                else if (nv.Role == UserRole.NhanVien && lv_NhanVien != null)
                     lv_NhanVien.Items.Add((ListViewItem)item.Clone());
             }
         }

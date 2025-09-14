@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLCuaHang
 {
-    public partial class SignUp : Form
+    public partial class SignUpForm : Form
     {
-        public SignUp()
+        public SignUpForm()
         {
             InitializeComponent();
         }

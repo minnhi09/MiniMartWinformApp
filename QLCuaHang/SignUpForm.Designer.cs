@@ -1,7 +1,7 @@
 ﻿
 namespace QLCuaHang
 {
-    partial class SignUp
+    partial class SignUpForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace QLCuaHang
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();

@@ -22,10 +22,7 @@ namespace QLCuaHang
             DialogResult result = MessageBox.Show("Bạn có muốn trở về không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                this.Hide();
-                MainForm frm = new MainForm();
-                frm.FormClosed += (s, args) => this.Show();
-                frm.ShowDialog();
+                this.Close(); // Đóng form hiện tại thay vì tạo MainForm mới
             }
         } 
     }
